@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getdbpeliculas">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetdbpeliculasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetdbpeliculasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsertarCompraPelicula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oent" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetInsertarCompraPeliculaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetInsertarCompraPeliculaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getdbpeliculaapagar">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetdbpeliculaapagarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetdbpeliculaapagarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConsultarUsuarioBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oent" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConsultarUsuarioBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetConsultarUsuarioBancoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPagoFinal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oent" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPagoFinalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPagoFinalResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetdbpeliculasSoapIn">
+    <wsdl:part name="parameters" element="tns:Getdbpeliculas" />
+  </wsdl:message>
+  <wsdl:message name="GetdbpeliculasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetdbpeliculasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInsertarCompraPeliculaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInsertarCompraPelicula" />
+  </wsdl:message>
+  <wsdl:message name="GetInsertarCompraPeliculaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInsertarCompraPeliculaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetdbpeliculaapagarSoapIn">
+    <wsdl:part name="parameters" element="tns:Getdbpeliculaapagar" />
+  </wsdl:message>
+  <wsdl:message name="GetdbpeliculaapagarSoapOut">
+    <wsdl:part name="parameters" element="tns:GetdbpeliculaapagarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConsultarUsuarioBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConsultarUsuarioBanco" />
+  </wsdl:message>
+  <wsdl:message name="GetConsultarUsuarioBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConsultarUsuarioBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPagoFinalSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPagoFinal" />
+  </wsdl:message>
+  <wsdl:message name="GetPagoFinalSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPagoFinalResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DBSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getdbpeliculas">
+      <wsdl:input message="tns:GetdbpeliculasSoapIn" />
+      <wsdl:output message="tns:GetdbpeliculasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertarCompraPelicula">
+      <wsdl:input message="tns:GetInsertarCompraPeliculaSoapIn" />
+      <wsdl:output message="tns:GetInsertarCompraPeliculaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getdbpeliculaapagar">
+      <wsdl:input message="tns:GetdbpeliculaapagarSoapIn" />
+      <wsdl:output message="tns:GetdbpeliculaapagarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultarUsuarioBanco">
+      <wsdl:input message="tns:GetConsultarUsuarioBancoSoapIn" />
+      <wsdl:output message="tns:GetConsultarUsuarioBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagoFinal">
+      <wsdl:input message="tns:GetPagoFinalSoapIn" />
+      <wsdl:output message="tns:GetPagoFinalSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DBSoap" type="tns:DBSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getdbpeliculas">
+      <soap:operation soapAction="http://tempuri.org/Getdbpeliculas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertarCompraPelicula">
+      <soap:operation soapAction="http://tempuri.org/GetInsertarCompraPelicula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getdbpeliculaapagar">
+      <soap:operation soapAction="http://tempuri.org/Getdbpeliculaapagar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultarUsuarioBanco">
+      <soap:operation soapAction="http://tempuri.org/GetConsultarUsuarioBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagoFinal">
+      <soap:operation soapAction="http://tempuri.org/GetPagoFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DBSoap12" type="tns:DBSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getdbpeliculas">
+      <soap12:operation soapAction="http://tempuri.org/Getdbpeliculas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertarCompraPelicula">
+      <soap12:operation soapAction="http://tempuri.org/GetInsertarCompraPelicula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getdbpeliculaapagar">
+      <soap12:operation soapAction="http://tempuri.org/Getdbpeliculaapagar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultarUsuarioBanco">
+      <soap12:operation soapAction="http://tempuri.org/GetConsultarUsuarioBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagoFinal">
+      <soap12:operation soapAction="http://tempuri.org/GetPagoFinal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DB">
+    <wsdl:port name="DBSoap" binding="tns:DBSoap">
+      <soap:address location="http://localhost:53353/DB.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DBSoap12" binding="tns:DBSoap12">
+      <soap12:address location="http://localhost:53353/DB.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

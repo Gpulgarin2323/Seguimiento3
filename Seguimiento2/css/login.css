@@ -1,0 +1,26 @@
+﻿html {
+
+    margin :0px;
+    padding: 0px;
+}
+
+
+.btnperso {
+
+    padding: 11px 4px 8px 5px;
+
+}
+.boxlogin {
+    border-radius: 4px;
+    margin: 50px auto;
+    width: 320px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.registro{
+    margin-top:23px;
+
+
+
+}
+

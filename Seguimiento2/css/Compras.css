@@ -1,0 +1,40 @@
+﻿html {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.btnperso {
+    padding: 11px 4px 8px 5px;
+    margin-left: 85px;
+}
+
+.boxlogin {
+    border-radius: 4px;
+    margin: 50px auto;
+    width: 626px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.registro {
+    margin-top: 23px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0 0 0 18px;
+    border-radius: 13px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    margin-left: 85px;
+}
